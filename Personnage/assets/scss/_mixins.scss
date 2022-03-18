@@ -1,0 +1,38 @@
+@mixin carte-ombre {
+    box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+@mixin carte-ombre-survol ($param) {
+    transform: translateY($param);
+    box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+}
+
+@mixin personnage-nom-role {
+    border-left: 0.7rem solid $orange;
+    padding-left: 2%;
+}
+
+@mixin personnage-nom {
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 2%;
+    font-size: 2rem;
+}
+
+@mixin personnage-description {
+    padding: 2% 0;
+}
+
+@mixin personnage-paragraphe {
+    padding: 3% 5% 0 5%;
+    border-bottom: 3px solid $gris;
+}
+
+@mixin carte-auteur {
+    padding: 4% 5%;
+}
+
+@mixin carte-personnage {
+    flex: 1 1 45%;
+    margin: 2%;
+}

@@ -1,0 +1,137 @@
+@import 'color';
+
+@mixin cadre-couleur {
+
+    height: 90vh;
+    margin: 3rem;
+    position: relative;
+    background-color: $grisED;
+    
+}
+
+@mixin cadre-photo($image) {
+
+    height: 90vh;
+    margin: 3rem;
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -70px;
+
+}
+
+@mixin text-placeholder {
+
+    color: $noir;
+    font-size: 2vh;
+    
+}
+
+@mixin flex($display, $justify, $align) {
+
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    
+}
+
+@mixin input-petit {
+
+    width: 15vw;
+    height: 5vh;
+    padding-right: 2vh;
+    padding-bottom: 0.5vh;
+    padding-left: 1vh;
+    margin-right: 1vh;
+    background-color: $grisED;
+    flex: 1 1 30%;
+    
+}
+
+@mixin letter($index,
+            $size,
+            $top,
+            $left: inherit,
+            $color) {
+
+    z-index: $index;
+    font-family: 'Oswald', sans-serif;  
+    font-size: $size;
+    color: $color;
+    position:absolute;
+    top: $top;
+    left: $left;
+    
+}
+
+@mixin title-with-strong($index: inherit,
+                        $paddingTop: inherit,
+                        $paddingLeft: inherit,
+                        $paddingBottom: inherit) {
+
+    z-index: $index;
+    font-size: 3vw;
+    padding-bottom: $paddingBottom;
+    padding-top: $paddingTop;
+    padding-left: $paddingLeft;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+
+    .title__strong {
+
+        font-weight: 600;
+
+    }
+    
+}
+
+@mixin before-description($left, $top) {
+
+    content: '';
+    position: absolute;
+    left: $left;
+    top: $top;
+    height: 75px;
+    border: 1px solid $gris7D;
+    
+}
+
+@mixin settings-left-right {
+
+    .settings__left {
+
+        font-size: 2.5rem;
+        height: 75px;
+        width: 75px;
+        display:grid;
+        place-items: center;
+        background-color: $blanc;
+        color: $gris95;
+
+    }
+
+    .settings__right {
+        
+        font-size: 2.5rem;
+        height: 75px;
+        width: 75px;
+        display:grid;
+        place-items: center;
+        background-color: $blanc;
+        color: $gris95;
+
+    }
+    
+}
+
+@mixin paragraph($width, $index) {
+    
+    width: $width;
+    z-index: $index;
+    padding-bottom: 3rem;
+    line-height: 2rem;
+    font-style: italic;
+    font-size: 1vw;
+    padding-bottom: 15vh;
+    
+}
